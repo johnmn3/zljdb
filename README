@@ -1,0 +1,29 @@
+# zljdb
+
+zljdb: Based on Chris Granger's SimpleDB. Uses a watcher to immediately 
+persist (with some contention back off), in addition to a persist once 
+every 60 seconds. Also stores the db in a zip file. The name zljdb is from: 
+Zipped cLJ DataBase.
+
+## Download
+
+  https://clojars.org/zljdb
+
+## Usage
+
+project.clj:
+
+  [zljdb "0.1.0-SNAPSHOT"]
+
+core.clj
+
+  (use 'zljdb.core)
+  (init)
+  zljdb: Could not find  a zljdb.zip file. Starting from scratch
+  #<ScheduledFutureTask java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@42ab6082>
+
+## License
+
+Copyright (C) 2012 FIXME
+
+Distributed under the Eclipse Public License, the same as Clojure.
